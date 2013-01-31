@@ -1,5 +1,6 @@
 require 'pry'
 
+
 class Animal
   attr_accessor :name, :breed, :age, :gender, :favtoy
 
@@ -10,9 +11,13 @@ class Animal
     @gender = gender
     @favtoy = favtoy
   end
+
+
   def to_s
-    "#{name} is a #{breed}."
+    "#{@name} is a #{@breed}"
   end
+
+
 end
 
 binding.pry
