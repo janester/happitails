@@ -5,3 +5,5 @@ class Shelter
     @animalList = {}
     @clientList = {}
   end
+
+  def
