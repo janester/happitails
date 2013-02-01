@@ -9,16 +9,14 @@ class Shelter
     @clients = {}
   end
 
-  def add_animal
-
   def animal_adopted(animal_obj, client_obj)
-    @animals.delete(animal_obj.name)
-    @clients[client_obj.name].pets << animal_obj
+    @animals.delete(animal_obj)
+    @clients[client_obj].pets << animal_obj
   end
 
   def animal_donated(animal_obj,client_obj)
-    @clients[client_obj.name].pets.pop
-    @animals[animal_obj.name] = animal_obj
+    @clients[client_obj].pets.pop
+    @animals[animal_obj] = animal_obj
   end
 
   def show_animal_list()

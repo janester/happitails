@@ -1,7 +1,7 @@
 require 'pry'
 
 class Client
-  attr_accessor :name, :age, :num_kids, :pets :gender
+  attr_accessor :name, :age, :num_kids, :pets, :gender
 
   def initialize(name, age, gender, num_kids)
     @name = name
