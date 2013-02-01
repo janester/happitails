@@ -1,18 +1,22 @@
 require 'pry'
 
 class Client
-  attr_accessor :name, :age, :num_kids, :num_pets
+  attr_accessor :name, :age, :num_kids, :pets :gender
 
-  def initialize(name, age, num_kids, num_pets)
+  def initialize(name, age, gender, num_kids)
     @name = name
     @age = age
+    @gender = gender
     @num_kids = num_kids
-    @num_pets = num_pets
+    @pets = []
   end
 
   def to_s
-    "#{@name} is a #{@age} year-old with #{@num_kids} kids and #{@num_pets} pets."
+    "#{@name} is a #{@age} year-old with #{@num_kids} kids and #{@pets.count} pets."
   end
-end
 
-binding.pry
+  def has_pets?
+    @pets.any?
+  end
+
+end
